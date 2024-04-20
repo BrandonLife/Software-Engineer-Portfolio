@@ -1,0 +1,37 @@
+.skills-title-container h1{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+    color: white;
+}
+
+.skills-flex-container{
+    display: flex;
+}
+
+.skills-image-container div img{
+    width: 15em;
+}
+
+.skills-tech-container{
+    margin-left: 20em;
+    margin-top: 5em;
+}
+
+.skills-tech-container h2{
+    font-size: 1.85em;
+    color: white;
+    }
+
+.skills-tech-container li{
+    font-size: 1.65em;
+    color: white;
+    }
+
+.skills-image-container{
+    margin-top: 5em;
+}
+
+.skills-image-container div{
+    margin-left: 11em;
+}
