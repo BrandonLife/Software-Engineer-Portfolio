@@ -5,20 +5,39 @@
     font-size: 1.65em;
 }
 
-.projects-container{
-    margin-top: 5em;
+.card-flex-container{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-.projects-container ul{
-    margin-top: 3em;
-}
 
-.projects-container ul li{
-margin-top: 3em;
-}
+/* Found this on w3schools.com */
+    .card { 
+        /* Add shadows to create the "card" effect */
+        box-shadow: 0 4px 8px 0 white;
+        transition: 0.3s;
+        width: 25%;
+        margin: 3em 3em 3em 3em;
+      }
+      .card img{
+        width: 100%;
+      }
+      /* On mouse-over, add a deeper shadow */
+      .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+      }
+      
+      /* Add some padding inside the card container */
+      .container h4{
+        color: white;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.85em;
+      }
 
-.projects-container ul li a{
-   text-decoration: none;
-   color: white;
-   font-size: 1.45em;
-    }
+      .container p{
+        color: white;
+        text-align: center;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.65em;
+      }
