@@ -9,7 +9,7 @@
 }
 
 .contact-title-container h1{
-color: white;
+    color: black;
 }
 
 .email-icon img{
@@ -30,10 +30,10 @@ color: white;
 
 .information h2{
     font-size: 1.85em;
-    color: white;
+    color: black;
 }
 
 .information span{
     font-size: 1.65em;
-    color: white;
+    color: black;
 }

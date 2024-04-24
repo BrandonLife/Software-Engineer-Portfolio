@@ -5,9 +5,10 @@
     font-size: 1.65em;
 }
 
-.card-flex-container{
+.cards-container{
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 
 
