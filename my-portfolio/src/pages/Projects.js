@@ -11,6 +11,9 @@ function Projects() {
          <div>
           <Navbar />
          </div>
+         <div className='portfolio-projects'>
+          <h1>Projects</h1>
+         </div>
     <div className='cards-container'>
     <Card style={{ width: '18.25rem' }}>
       <Card.Img variant="top" src="holder.js/100px180" />

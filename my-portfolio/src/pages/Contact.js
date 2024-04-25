@@ -1,35 +1,55 @@
 import React from 'react'
 import Navbar from '../components/Navbar'
 import '../styles/Contact.css'
+import Form from 'react-bootstrap/Form'; 
+import Button from 'react-bootstrap/Button'; 
+import InputGroup from 'react-bootstrap/InputGroup'
 function Contact() {
   return (
-    <div>
-         <div><Navbar /></div>
-         <div className='contact-title-container'>
-          <h1>Contact Me</h1>
-        </div>
-         <div className='contact-info-flex-container'>
-        <div className='information'>
-        <div className='email'>
-        <h2>Email</h2>
-        <span>Blife1119@gmail.com</span>
-        </div>
-        <div className='Phone'>
-        <h2>Phone</h2>
-        <span>919-771-6149</span>
-        </div>
-        <div className='Location'>
-        <h2>Location</h2>
-        <span>Raleigh, NC</span>
-        </div>
-        {/* End of information div */}
-        </div>
-        <div className='email-icon'>
-          <img src='https://static-00.iconduck.com/assets.00/email-icon-1024x815-7gaglzqv.png' alt='email icon'></img>  
-        </div>
-        </div>
+    <div className='contact-body'>
+         <div>
+          <Navbar />
+         </div>
+         <div className='contact-form-container'>
+          <div className='contact-us-title'>
+          <h3>Contact Us</h3>
+          </div>
+        <Form>
+          <Form.Group className='form-group'>
+            <Form.Label>First Name</Form.Label>
+            <Form.Control type='text' placeholder='Enter your first Name' autoFocus="true"></Form.Control>
+            {/* Search how to make text field focus in google */}
+            </Form.Group>
+            <Form.Group className='form-group'>
+            <Form.Label>Last Name</Form.Label>
+            <Form.Control type='text' placeholder='Enter  your last Name'></Form.Control>
+          </Form.Group>
+          <Form.Group className='form-group'>
+            <Form.Label>Email Address📨</Form.Label>
+            <Form.Control type='email' placeholder='Enter your email address. Ex. JohnDoe@gmail.com'></Form.Control>
+          </Form.Group>
+          <Form.Group className='form-group'>
+            <Form.Label>Phone number📞</Form.Label>
+            <Form.Control type='number' placeholder='Enter your phone number. Ex.123-456-7890'></Form.Control>
+          </Form.Group>
+          <Form.Group className='form-group'>
+          <Form.Label>Message📝</Form.Label>
+          <InputGroup>
+          <Form.Control as="textarea" maxLength={120} aria-label="With textarea" />
+         </InputGroup>
+         {/* Found this at https://react-bootstrap.netlify.app/docs/forms/input-group */}
+          </Form.Group>
+          <div className='button-container'>
+          <Button variant='primary' type='submit'>
+            Send ✅
+          </Button>
+          </div>
+         </Form>
+         </div>
     </div>
+    
   )
 }
 
 export default Contact
+

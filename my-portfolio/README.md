@@ -7,6 +7,13 @@
 <ul>
 <li>Reactjs</li>
 <li>NodeJs</li>
+<li>MongoDB</li>
+<li>ExpressJs</li>
+</ul>
+
+<h1>CSS Frameworks used</h1>
+<ul>
+<li>React Bootstrap</li>
 </ul>
 
 
