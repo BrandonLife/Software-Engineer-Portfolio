@@ -1,8 +1,35 @@
 import React from 'react'
+import { useState, useEffect } from 'react'
 import Navbar from '../components/Navbar'
 import '../styles/Home.css'
+import TextTransition, { presets } from 'react-text-transition';
 
+// Found this text transition package at https://www.npmjs.com/package/react-text-transition
+const PDF_URL = "http://localhost:3000/BL_Resume2023.pdf"
 function Home() {
+const wordsArr= ['Software Engineer', "Web Developer", "Full Stack Engineer", "Computer Programmer", "Future Leader", "Future Blockchain Engineer"]
+const [timer, setTimer] = useState(0)
+// Found how to create a downloadable link from this link- https://www.youtube.com/watch?v=IPEqb_AJbAQ&t=309s
+const downloadFileAtUrl = (url)=>{
+ 
+  const filename = PDF_URL.split('/').pop()
+  const aTag = document.createElement('a')
+  aTag.href = url
+  aTag.setAttribute('download', filename )
+  document.body.appendChild(aTag)
+  aTag.click()
+  aTag.remove()
+}
+
+useEffect(() => {
+  const intervalId = setInterval(
+    () => setTimer((timer) => timer + 1),
+    3000, // every 3 seconds
+  );
+  return () => clearTimeout(intervalId);
+}, []);
+
+
   return (
   <div>
         <Navbar />
@@ -13,13 +40,19 @@ function Home() {
      <div className='main-container'>
       <div className='cover-title'>
           <div>
-          <h1>Hello, my name is Brandon.</h1>
+          <h1>Hello, my name is Brandon</h1>
           </div>
           <div>
-          <h2>I am a Software Engineer.</h2>
+          <h2>I am a <TextTransition className='text-transition' springConfig={presets.wobbly}>{wordsArr[timer % wordsArr.length]}</TextTransition></h2>
           </div>
           </div>
+      <div className='downloadable-button'>
+      <button onClick={()=>{downloadFileAtUrl(PDF_URL)}} className="button">
+       <a>Download Resume</a>
+      </button>
       </div>
+      </div>
+      
     </main>
 </div>
   )

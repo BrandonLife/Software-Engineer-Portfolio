@@ -1,11 +1,3 @@
-.projects-container-title h1{
-    color: white;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 1.65em;
-    font-weight: bold;
-}
-
 .cards-container{
     display: flex;
     flex-wrap: wrap;
@@ -14,6 +6,11 @@
 
 .portfolio-projects h1{
   text-align: center;
+  margin-top: .5em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+  color: black;
 }
 
 
@@ -31,7 +28,7 @@
       }
       /* On mouse-over, add a deeper shadow */
       .card:hover {
-        box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+        box-shadow: 6px 8px 6px 3px rgba(230, 71, 71, 0.829);
       }
       
       /* Add some padding inside the card container */
@@ -47,4 +44,8 @@
         text-align: center;
         font-family: Arial, Helvetica, sans-serif;
         font-size: 1.65em;
+      }
+
+      .btn-color button:hover{
+        background-color: green;
       }

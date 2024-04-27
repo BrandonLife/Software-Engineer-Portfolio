@@ -3,7 +3,7 @@
     font-size: 2.03em;
     color: black;
     font-family: Arial, Helvetica, sans-serif; 
-    padding-top: 5em;   
+    padding-top: 3em;   
     font-weight: bold;
 }
 
@@ -12,13 +12,14 @@
     font-size: 2em;
     color: black;
     font-family: Arial, Helvetica, sans-serif; 
-    padding-top: .75em;
+    padding-top: .30em;
     font-weight: bold;
+    width: 100%;
 }
 
 .home-flex-container{
     display: flex;
-    margin-top: 5.14em;
+    margin-top: 6.40em;
 }
 
 .home-image-profile{
@@ -31,7 +32,42 @@
     border-radius: 1200px;
 }
 
+.home-image-profile img:hover{
+    box-shadow: 10px 12px 14px gray;
+    width: 26em;
+}
+
 .main-container{
-    width: 30%;
-    margin-right: 50em;
+    width: 60%;
+    margin-right: 10em;
+}
+
+.cover-title{
+    width: 100%;
+}
+
+body{
+    background-image: url('https://pbs.twimg.com/media/Ex_lfe1XIAAd1ak.jpg:large');
+}
+
+.downloadable-button{
+    display: inline-flex;
+    /* flex-direction: column-reverse; */
+    margin-right: 10em;
+    height: 10vh;
+    margin-top: .3em;
+    /* width: 10%; */
+}
+
+.downloadable-button button{
+   background-color: rgb(207, 63, 63);
+   border: 2px solid black;
+   border-radius: 2em;
+   color: black;
+   font-weight: bold;
+}
+
+.downloadable-button button:hover{
+    background-color: rgb(14, 95, 128);
+    width: 24em;
 }

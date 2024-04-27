@@ -10,10 +10,10 @@ function Contact() {
          <div>
           <Navbar />
          </div>
-         <div className='contact-form-container'>
-          <div className='contact-us-title'>
-          <h3>Contact Us</h3>
+         <div className='contact-us-title'>
+          <h1>Contact Us</h1>
           </div>
+         <div className='contact-form-container'>
         <Form>
           <Form.Group className='form-group'>
             <Form.Label>First Name</Form.Label>

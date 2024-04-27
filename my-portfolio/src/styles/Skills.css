@@ -4,6 +4,7 @@
     font-size: 2em;
     color: black;
     font-weight: bold;
+    margin-top: .5em;
 }
 
 .carousel-container{
@@ -11,4 +12,84 @@
     justify-content: center;
     align-items: center;
     margin-top: 6em;
+}
+
+.skills-flex-container{
+    display: flex;
+    margin-top: 2em;
+    justify-content: space-evenly;
+}
+
+.skills{
+    border: 3px solid black;
+    height: 15vh;
+    background-color: white;
+}
+
+.skills p{
+    text-align: center;
+    font-size: 1.45em;
+}
+
+.float-left{
+    border: 2px solid black;
+    border-radius: .5em;
+    width: 32%;
+}
+.middle-container{
+    border: 2px solid black;
+    border-radius: .5em;
+    width: 32%;
+}
+.float-right{
+    border: 2px solid black;
+    border-radius: .5em;
+    width: 32%;
+}
+
+.float-left h1{
+    text-align: center;
+    background-color: darkgrey;
+    border: 3px solid black;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.75em;
+    font-weight: 1em;
+    margin: 0;
+}
+.middle-container h1{
+    text-align: center;
+    background-color: darkgrey;
+    border: 3px solid black;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.75em;
+    font-weight: 1em;
+    margin: 0;
+}
+.float-right h1{
+    text-align: center;
+    background-color: darkgrey;
+    border: 3px solid black;
+    font-family: Arial, Helvetica, sans-serif; 
+    font-size: 1.75em;
+    font-weight: 1em;
+    margin: 0;
+}
+
+.float-left:hover{
+    box-shadow: 10px 10px 2px 1px rgba(230, 71, 71, 0.829);
+   
+}
+.middle-container:hover{
+    box-shadow: 10px 10px 2px 1px rgba(230, 71, 71, 0.829);
+   
+}
+.float-right:hover{
+    box-shadow: 10px 10px 2px 1px rgba(230, 71, 71, 0.829);
+    
+}
+
+.skills:hover{
+    background-image: url('https://www.komar.de/media/catalog/product/cache/5/image/9df78eab33525d08d6e5fb8d27136e95/I/A/IADX8-062.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
 }
