@@ -1,51 +1,49 @@
-.cards-container{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 }
 
-.portfolio-projects h1{
-  text-align: center;
-  margin-top: .5em;
-  font-family: Arial, Helvetica, sans-serif;
-  font-size: 2em;
-  font-weight: bold;
-  color: black;
+.portfolio-projects h1 {
+	text-align: center;
+	margin-top: 0.5em;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 2em;
+	font-weight: bold;
+	color: black;
 }
-
-
 
 /* Found this on w3schools.com */
-    .card { 
-        /* Add shadows to create the "card" effect */
-        box-shadow: 0 4px 8px 0 white;
-        transition: 0.3s;
-        width: 25%;
-        margin: 3em 3em 3em 3em;
-      }
-      .card img{
-        width: 100%;
-      }
-      /* On mouse-over, add a deeper shadow */
-      .card:hover {
-        box-shadow: 6px 8px 6px 3px rgba(230, 71, 71, 0.829);
-      }
-      
-      /* Add some padding inside the card container */
-      .container h4{
-        color: white;
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.85em;
-      }
+.card {
+	/* Add shadows to create the "card" effect */
+	box-shadow: 0 4px 8px 0 white;
+	transition: 0.3s;
+	width: 25%;
+	margin: 3em 3em 3em 3em;
+}
+.card img {
+	width: 100%;
+}
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+	box-shadow: 6px 8px 6px 3px rgba(230, 71, 71, 0.829);
+}
 
-      .container p{
-        color: white;
-        text-align: center;
-        font-family: Arial, Helvetica, sans-serif;
-        font-size: 1.65em;
-      }
+/* Add some padding inside the card container */
+.container h4 {
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.85em;
+}
 
-      .btn-color button:hover{
-        background-color: green;
-      }
+.container p {
+	color: white;
+	text-align: center;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1.65em;
+}
+
+.btn-color button:hover {
+	background-color: green;
+}
