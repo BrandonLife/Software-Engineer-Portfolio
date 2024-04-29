@@ -1,27 +1,27 @@
 const config = require("../config/config");
-const models = require("../models");
+const models = require("../models/Project");
 const Utilities = require("../utilities");
 
 module.exports = {
 	get: (req, res, next) => {
-		models.Card.find()
-			.then((posts) => {
-				return res.send(posts);
+		models.Project.find()
+			.then((projects) => {
+				return res.send(projects);
 			})
 			.catch(next);
 	},
-	specificCard: (req, res, next) => {
+	specificProject: (req, res, next) => {
 		const id = req.params.id;
-		models.Card.findOne({ _id: id })
-			.then((card) => res.send(card))
+		models.Project.findOne({ _id: id })
+			.then((project) => res.send(project))
 			.catch(next);
 	},
 	post: {
-		createCard: (req, res, next) => {
+		createProject: (req, res, next) => {
 			const { Title, imageUrl, Summary, Link, dateMade } = req.body;
 
-			models.Card.create({ Title, imageUrl, Summary, Link, dateMade })
-				.then((createdCard) => res.send(createdCard))
+			models.Project.create({ Title, imageUrl, Summary, Link, dateMade })
+				.then((createdProject) => res.send(createdProject))
 				.catch(next);
 		},
 	},
@@ -29,8 +29,8 @@ module.exports = {
 	put: (req, res, next) => {
 		const id = req.params.id;
 		const { Title, imageUrl, Summary, Link, dateMade } = req.body;
-		console.log(req, "req object for Card");
-		models.Card.updateOne({
+		console.log(req, "req object for Project");
+		models.Project.updateOne({
 			_id: id,
 			title: Title,
 			imageURL: imageUrl,
@@ -38,15 +38,15 @@ module.exports = {
 			Link: Link,
 			Date: dateMade,
 		})
-			.then((updatedCard) => res.send(updatedCard))
+			.then((updatedProject) => res.send(updatedProject))
 			.catch(next);
 	},
 
 	delete: (req, res, next) => {
 		let id = req.params.id;
 		console.log(req);
-		models.Card.deleteOne({ _id: id })
-			.then((removedCard) => res.send(removedCard))
+		models.Project.deleteOne({ _id: id })
+			.then((removedProject) => res.send(removedProject))
 			.catch(next);
 	},
 };

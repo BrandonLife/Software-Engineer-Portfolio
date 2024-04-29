@@ -37,7 +37,6 @@ function Home() {
 
 	return (
 		<div>
-			<Navbar />
 			<main className="home-flex-container">
 				<div className="home-image-profile">
 					<img

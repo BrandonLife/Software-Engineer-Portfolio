@@ -2,7 +2,7 @@ const routes = require("../routes/index");
 module.exports = (app) => {
 	app.use("/api/User", routes.User);
 
-	app.use("/api/Post", routes.Card);
+	// app.use("/api/Project", routes.Project);
 
 	app.use("/*", (req, res, next) =>
 		res.send(

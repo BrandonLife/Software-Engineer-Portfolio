@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const cardSchema = new mongoose.Schema({
+const projectSchema = new mongoose.Schema({
 	Title: {
 		type: String,
 		required: true,
@@ -17,9 +17,13 @@ const cardSchema = new mongoose.Schema({
 		type: String,
 		required: true,
 	},
+	creatorId: {
+		type: mongoose.Schema.Types.ObjectId,
+		ref: "User",
+	},
 	DateMade: {
 		type: String,
 	},
 });
 
-module.exports = mongoose.model("Card", cardSchema);
+module.exports = mongoose.model("Project", projectSchema);

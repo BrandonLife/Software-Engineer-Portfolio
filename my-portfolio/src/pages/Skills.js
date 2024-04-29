@@ -1,5 +1,4 @@
-import React, { useState } from "react";
-import Navbar from "../components/Navbar";
+import React from "react";
 import "../styles/Skills.css";
 // import 'bootstrap/dist/css/bootstrap.css';
 // import 'bootstrap/dist/js/bootstrap.js';
@@ -13,9 +12,6 @@ function Skills() {
 	// };
 	return (
 		<div>
-			<div>
-				<Navbar />
-			</div>
 			<div className="skills-title-container">
 				<h1>My Skills</h1>
 			</div>
