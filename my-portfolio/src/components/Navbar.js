@@ -31,7 +31,7 @@ function Navbar(props) {
 				<Link to="/Contact">Contact</Link>
 			</li>,
 			<li className="links">
-				<Link to="/Project">Projects</Link>
+				<Link to="/AllProjects">Projects</Link>
 			</li>,
 			<li className="links">
 				<Link to="/Project/createProject"> New Project</Link>

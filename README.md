@@ -19,10 +19,11 @@
 
 <h1>Problems I encountered while making this project</h1>
 <ol>
-<li>Struggling to get the navigation links to go to other pages</li>
-<p>Initially I tried using the BrowserRouter, Routes, and Route hooks but those were not working. So I went to google and youtube to find solutions. I found a youtube channel which used the CreateBrowser and RouterProvider hooks.</p>
-<p>Solution can be found at -https://youtu.be/o05ZP6_JQqE?si=NUspKuP3IrsNhb9d</p>
+<li>Struggling to get pass cors errors</li>
+<p>Im still working on finding a solution for this.</p>
+<p>No Solution currently.</p>
 <li>Making the navbar available on all pages. Right now i have to include the navbar by placing a navbar component on all pages rather than just one file and it being included to all pages. I will have to see if there is a solution for this. </li>
+<p>Found the solution to this problem by just placing the navbar component on the app.js at the top</p>
 </ol>
 
 # Getting Started with Create React App

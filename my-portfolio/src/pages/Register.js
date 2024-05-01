@@ -17,6 +17,14 @@ export default function Register(props) {
 	function registerHandler(event) {
 		event.preventDefault();
 		let incorrectInput = false;
+		if(firstName === 0){
+			incorrectInput = true
+			console.log("Please type in your first name")
+		}
+		if(lastName === 0){
+			incorrectInput = true
+			console.log("Please type in your last name")
+		}
 		if (username.length === 0) {
 			incorrectInput = true;
 			console.log("Please type in username");
@@ -35,12 +43,14 @@ export default function Register(props) {
 		}
 		if (!incorrectInput) {
 			UserRegister({
+				firstName,
+				lastName,
 				username,
 				email,
 				password,
 				rePassword,
 			}).then((data) => {
-				console.log(data);
+				// console.log(data);
 				// if(data.id){
 				Navigate("/Home");
 				// }else{
@@ -143,7 +153,7 @@ export default function Register(props) {
 					{/* Search how to make text field focus in google */}
 				</Form.Group>
 				<div>
-					<Button type="submit">Log in</Button>
+					<Button type="submit">Create Account</Button>
 				</div>
 			</Form>
 		</div>

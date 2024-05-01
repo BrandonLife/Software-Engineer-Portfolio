@@ -32,7 +32,7 @@ function App() {
 					<Route path="/Home" element={<Home />} />
 					<Route path="/About" element={<About />} />
 					<Route
-						path="/Project"
+						path="/AllProjects"
 						element={
 							<Projects
 								loggedIn={loggedIn}
