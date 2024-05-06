@@ -19,9 +19,9 @@
 <h1>Problems I encountered while making this project</h1>
 <ol>
 <li>Struggling to get the backend working</li>
-<p>I tried initally to create a backend with vanilla javascript as we had done in school. For some reason this was not working for me so i went to youtube to look for a solution.</p>
+<p>I initially tried to use vanilla javascript to get the backend working. However this was not working. So i went to youtube to search for a solution.</p>
 <p>Solution can be found at -https://www.youtube.com/watch?v=xElA9mGi-I0</p>
-<li>So an issue i  had was using react bootstrap cards to properly display on the screen. When i would create a card, the image, the title, and the summary would not display but dummy data showed that the cards were showing but somewhere there was an issue. Still Currently working on this.  </li>
+<li>Right now i have the cards showing on the screen. However the data in them is not displaying. So i need to fix that and the styling for the cards.  </li>
 </ol>
 
 # Getting Started with Create React App
