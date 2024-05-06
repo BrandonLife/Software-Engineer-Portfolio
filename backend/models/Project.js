@@ -1,27 +1,16 @@
 const mongoose = require("mongoose");
 
 const projectSchema = new mongoose.Schema({
-	Title: {
+	title: {
 		type: String,
-		required: true,
+	},
+	summary: {
+		type: String,
 	},
 	imageUrl: {
 		type: String,
-		required: true,
 	},
-	Summary: {
-		type: String,
-		required: true,
-	},
-	Link: {
-		type: String,
-		required: true,
-	},
-	creatorId: {
-		type: mongoose.Schema.Types.ObjectId,
-		ref: "User",
-	},
-	DateMade: {
+	linkUrl: {
 		type: String,
 	},
 });

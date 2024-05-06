@@ -1,22 +1,24 @@
-const config = require("./config/config");
-const dbConnection = require("./config/database");
+const express = require("express");
+const mongoose = require("mongoose");
+const dotenv = require("dotenv");
+const bodyParser = require("body-parser");
+const cors = require("cors");
+const app = express();
 
-const app = require("express")();
+app.use(bodyParser.json());
+dotenv.config();
+const routes = require("./routes/ProjectRoute");
 
-dbConnection()
-	.then(() => {
-		require("./config/express")(app);
+const PORT = process.env.PORT | 5000;
 
-		require("./config/routes")(app);
+app.use(express.json());
+app.use(cors());
 
-		app.use(function (err, req, res, next) {
-			res.status(500).send(err.message);
-			console.log("*".repeat(90));
-		});
+mongoose
+	.connect(process.env.MONGO_URI)
+	.then(() => console.log("MongoDB Connected..."))
+	.catch((err) => console.log(err));
 
-		app.listen(
-			config.port,
-			console.log(`Server is running. Listening on port ${config.port}!`)
-		);
-	})
-	.catch(console.error);
+app.use("/api", routes);
+
+app.listen(PORT, () => console.log(`Listening on port ${PORT}`));

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
-import { Navigate } from "react-router-dom";
-import { createNewProject } from "../services";
+import axios from "axios";
+import { baseURL } from "../utils/constant";
 
 function CreateProject(props) {
 	const [title, setTitle] = useState("");
@@ -10,31 +10,23 @@ function CreateProject(props) {
 	const [imageUrl, setImageUrl] = useState("");
 	const [link, setLink] = useState("");
 
-	const [data, setData] = useState({
-		link: "",
-		imageURL: "",
-		title: "",
-		summary: "",
-	});
-	data.imageURL = imageUrl;
-	data.title = title;
-	data.summary = summary;
-	data.link = link;
-	if (!props.loggedIn) {
-		return <Navigate to="/User/login" replace={true} />;
-	}
-	function createNewProjectHandler(event) {
-		event.preventDefault();
-		const newData = { ...data };
-		setData(newData);
-		createNewProject(newData);
-		Navigate("/Project");
-	}
+	const project = {
+		title: title,
+		summary: summary,
+		imageUrl: imageUrl,
+		link: link,
+	};
+
+	const addProject = () => {
+		axios.post(`${baseURL}/save`, { project: project }).then((res) => {
+			console.log(res.data);
+		});
+	};
 
 	return (
 		<div>
 			<h1>Create Project</h1>
-			<Form onSubmit={createNewProjectHandler}>
+			<Form onSubmit={addProject}>
 				<Form.Group className="form-group">
 					<Form.Label>Project Title</Form.Label>
 					<Form.Control
