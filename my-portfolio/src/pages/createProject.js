@@ -1,39 +1,43 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
+import "../styles/createProject.css";
 
-function CreateProject(props) {
+function CreateProject() {
 	const [title, setTitle] = useState("");
 	const [summary, setSummary] = useState("");
 	const [imageUrl, setImageUrl] = useState("");
-	const [link, setLink] = useState("");
+	const [linkAddress, setLink] = useState("");
+	console.log(title, summary, imageUrl, linkAddress);
 
-	const project = {
-		title: title,
-		summary: summary,
-		imageUrl: imageUrl,
-		link: link,
-	};
-
-	const addProject = () => {
-		axios.post(`${baseURL}/save`, { project: project }).then((res) => {
-			console.log(res.data);
-		});
-	};
+	function submit(e) {
+		e.preventDefault();
+		axios
+			.post(`${baseURL}/save`, {
+				title,
+				summary,
+				imageUrl,
+				linkAddress,
+			})
+			.then((res) => {
+				console.log(res);
+			})
+			.catch((err) => console.log(err));
+	}
 
 	return (
 		<div>
-			<h1>Create Project</h1>
-			<Form onSubmit={addProject}>
+			<h1 className="create-title">Create Project</h1>
+			<Form onSubmit={(e) => submit(e)}>
 				<Form.Group className="form-group">
 					<Form.Label>Project Title</Form.Label>
 					<Form.Control
 						type="text"
 						placeholder="Enter name of Project"
 						autoFocus={true}
-						name="Title"
+						name="title"
 						onChange={(e) => {
 							setTitle(e.target.value);
 						}}
@@ -45,7 +49,7 @@ function CreateProject(props) {
 					<Form.Control
 						type="text"
 						placeholder="Enter project summary"
-						name="Summary"
+						name="summary"
 						onChange={(e) => {
 							setSummary(e.target.value);
 						}}
@@ -69,7 +73,7 @@ function CreateProject(props) {
 					<Form.Control
 						type="text"
 						placeholder="Enter link address to website"
-						name="Link"
+						name="linkAddress"
 						onChange={(e) => {
 							setLink(e.target.value);
 						}}

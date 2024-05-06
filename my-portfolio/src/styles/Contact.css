@@ -1,6 +1,5 @@
 .contact-form-container {
-	margin-top: 0.5em;
-	margin-left: 45em;
+	margin: auto;
 }
 
 form {
@@ -42,8 +41,8 @@ form label {
 }
 
 .button-container {
-	margin-top: 3em;
-	padding-left: 9em;
+	margin: auto;
+	padding-left: 35%;
 }
 
 .button-container button {

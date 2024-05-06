@@ -4,7 +4,7 @@ import "../styles/Navbar.css";
 function Navbar() {
 	let navRoutes = [
 		<li className="links">
-			<Link to="/Home">Home</Link>
+			<Link to="/">Home</Link>
 		</li>,
 		<li className="links">
 			<Link to="/About">About</Link>

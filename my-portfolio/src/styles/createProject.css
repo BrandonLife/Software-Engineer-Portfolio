@@ -1,0 +1,14 @@
+.create-title {
+	text-align: center;
+	font-weight: bold;
+	font-family: Arial, Helvetica, sans-serif;
+	color: black;
+}
+
+form {
+	margin: auto;
+}
+
+.create-btn-submit {
+	padding-left: 40%;
+}

@@ -10,7 +10,7 @@ const projectSchema = new mongoose.Schema({
 	imageUrl: {
 		type: String,
 	},
-	linkUrl: {
+	linkAddress: {
 		type: String,
 	},
 });

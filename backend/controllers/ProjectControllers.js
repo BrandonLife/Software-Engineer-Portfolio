@@ -5,10 +5,10 @@ module.exports.getProjects = async (req, res) => {
 	res.send(projects);
 };
 module.exports.saveProject = (req, res) => {
-	const { project } = req.body;
-	ProjectModel.create({ project })
+	let newProject = req.body;
+	ProjectModel.create(newProject)
 		.then((data) => {
-			console.log("Saved Successfully");
+			console.log("Project saved Successfully");
 			res.status(201).send(data);
 		})
 		.catch((err) => {

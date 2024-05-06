@@ -9,7 +9,7 @@ function Contact() {
 			<div className="contact-form-container">
 				<Form>
 					<div className="contact-us-title">
-						<h1>Contact Us</h1>
+						<h1>Let's connect</h1>
 					</div>
 					<Form.Group className="form-group">
 						<Form.Label>First Name</Form.Label>
