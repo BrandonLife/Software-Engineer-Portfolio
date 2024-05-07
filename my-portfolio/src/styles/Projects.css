@@ -1,7 +1,7 @@
 .cards-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: center;
+	justify-content: start;
 }
 
 .portfolio-projects h1 {
@@ -50,4 +50,8 @@
 	color: black;
 	font-weight: bold;
 	font-family: Arial, Helvetica, sans-serif;
+}
+
+.project-image{
+	border-bottom: 2px solid black;
 }

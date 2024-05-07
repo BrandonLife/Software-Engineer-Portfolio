@@ -3,6 +3,7 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/esm/Button";
 import axios from "axios";
 import { baseURL } from "../utils/constant";
+import {useNavigate} from 'react-router-dom'
 import "../styles/createProject.css";
 
 function CreateProject() {
@@ -10,6 +11,7 @@ function CreateProject() {
 	const [summary, setSummary] = useState("");
 	const [imageUrl, setImageUrl] = useState("");
 	const [linkAddress, setLink] = useState("");
+	const Navigate = useNavigate() 
 	console.log(title, summary, imageUrl, linkAddress);
 
 	function submit(e) {
@@ -22,7 +24,7 @@ function CreateProject() {
 				linkAddress,
 			})
 			.then((res) => {
-				console.log(res);
+				Navigate('/')
 			})
 			.catch((err) => console.log(err));
 	}

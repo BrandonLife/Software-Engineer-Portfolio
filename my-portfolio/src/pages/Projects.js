@@ -3,7 +3,7 @@ import "../styles/Projects.css";
 import { useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/esm/Button";
-import axios from "axios";
+import axios from 'axios'
 import { baseURL } from "../utils/constant";
 function Projects() {
 	const [projects, setProjects] = useState([]);
@@ -20,7 +20,8 @@ function Projects() {
 				key={project._id}
 				style={{ width: "18rem", border: "3px solid black" }}
 			>
-				<Card.Img variant="top" src={project.imageUrl} />
+				<div className="project-image"><Card.Img variant="top" src={project.imageUrl}  style={{width: '100%'}}/></div>
+				
 				<Card.Body>
 					<Card.Title className="card-title">{project.title}</Card.Title>
 					<Card.Text className="card-summary">{project.summary}</Card.Text>
@@ -46,7 +47,7 @@ function Projects() {
 	return (
 		<div>
 			<h1 className="Portfolio-title">My Projects</h1>
-			<div>{projectsDisplay}</div>
+			<div className="cards-container">{projectsDisplay}</div>
 		</div>
 	);
 }
