@@ -1,13 +1,43 @@
-import React from "react";
+import React, { useState } from "react";
 import "../styles/Contact.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import InputGroup from "react-bootstrap/InputGroup";
+import { baseURL } from "../utils/constant";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
 function Contact() {
+const [firstName, setFirstName] = useState('')
+const [lastName, setLastName] = useState('')
+const [email, setEmail] = useState('')
+const [message, setMessage] = useState('')
+const [phoneNumber, setPhoneNumber] = useState('')
+const [subject, setSubject] = useState('')
+const Navigate = useNavigate()
+function submitEmail(e){
+	e.preventDefault()
+	axios.post(`${baseURL}/email/send`, {
+		firstName,
+		lastName,
+		email,
+		message,
+		phoneNumber,
+		subject
+	})
+	.then((res)=>{
+		
+		if(res.status> 199 && res.status <300){
+			alert("Email Sent Successfully")
+		}
+		
+	})
+	.catch((err)=>console.log(err))
+	Navigate('/')
+}
 	return (
 		<div className="contact-body">
 			<div className="contact-form-container">
-				<Form>
+				<Form onSubmit={(e)=>submitEmail(e)}>
 					<div className="contact-us-title">
 						<h1>Let's connect</h1>
 					</div>
@@ -17,6 +47,9 @@ function Contact() {
 							type="text"
 							placeholder="Enter your first Name"
 							autoFocus={true}
+							onChange={(e)=>{
+								setFirstName(e.target.value)
+							}}
 						></Form.Control>
 						{/* Search how to make text field focus in google */}
 					</Form.Group>
@@ -24,7 +57,10 @@ function Contact() {
 						<Form.Label>Last Name</Form.Label>
 						<Form.Control
 							type="text"
-							placeholder="Enter  your last Name"
+							placeholder="Enter your last Name"
+							onChange={(e)=>{
+								setLastName(e.target.value)
+							}}
 						></Form.Control>
 					</Form.Group>
 					<Form.Group className="form-group">
@@ -32,13 +68,29 @@ function Contact() {
 						<Form.Control
 							type="email"
 							placeholder="Enter your email address. Ex. JohnDoe@gmail.com"
+							onChange={(e)=>{
+								setEmail(e.target.value)
+							}}
 						></Form.Control>
 					</Form.Group>
 					<Form.Group className="form-group">
 						<Form.Label>Phone number📞</Form.Label>
 						<Form.Control
 							type="number"
-							placeholder="Enter your phone number. Ex.123-456-7890"
+							placeholder="Enter your phone number. Ex.1234567890"
+							onChange={(e)=>{
+								setPhoneNumber(e.target.value)
+							}}
+						></Form.Control>
+					</Form.Group>
+					<Form.Group className="form-group">
+						<Form.Label>Subject</Form.Label>
+						<Form.Control
+							type="text"
+							placeholder="Subject Line"
+							onChange={(e)=>{
+								setSubject(e.target.value)
+							}}
 						></Form.Control>
 					</Form.Group>
 					<Form.Group className="form-group">
@@ -48,6 +100,9 @@ function Contact() {
 								as="textarea"
 								maxLength={120}
 								aria-label="With textarea"
+								onChange={(e)=>{
+									setMessage(e.target.value)
+								}}
 							/>
 						</InputGroup>
 						{/* Found this at https://react-bootstrap.netlify.app/docs/forms/input-group */}

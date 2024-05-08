@@ -8,6 +8,7 @@ const app = express();
 app.use(bodyParser.json());
 dotenv.config();
 const routes = require("./routes/ProjectRoute");
+const emailRoutes = require('./routes/emailRoute')
 
 const PORT = process.env.PORT | 5000;
 
@@ -20,5 +21,6 @@ mongoose
 	.catch((err) => console.log(err));
 
 app.use("/api", routes);
+app.use('/api', emailRoutes)
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
