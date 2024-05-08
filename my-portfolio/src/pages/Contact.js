@@ -25,13 +25,10 @@ function submitEmail(e){
 		subject
 	})
 	.then((res)=>{
-		
-		if(res.status> 199 && res.status <300){
-			alert("Email Sent Successfully")
-		}
-		
+		console.log(res)
 	})
 	.catch((err)=>console.log(err))
+	alert('Message Sent')
 	Navigate('/')
 }
 	return (
