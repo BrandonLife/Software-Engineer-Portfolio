@@ -109,6 +109,32 @@ function submitEmail(e){
 							Send ✅
 						</Button>
 					</div>
+					<div className="find-me-title">
+									<h3>You can also connect with me on</h3>
+								</div>
+					<div className="social-media-links">
+								
+								<div className="social-links">
+									<a href="https://www.linkedin.com/in/brandon-life/">
+									<div className="linkedin-container">
+										<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/ca/LinkedIn_logo_initials.png/600px-LinkedIn_logo_initials.png?20140125013055" alt="LinkedIn logo"></img>
+									</div>
+									<div className="linkedin-span">
+										<span><p>LinkedIn</p></span>
+									</div>
+									</a>
+								</div>
+								<div className="social-links">
+									<a href="https://github.com/BrandonLife">
+									<div className="github-container">
+										<img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="Github logo"></img>
+									</div>
+									<div className="github-span">
+										<span><p>Github</p></span>
+									</div>
+									</a>
+								</div>
+					</div>
 				</Form>
 			</div>
 		</div>

@@ -31,8 +31,9 @@ function CreateProject() {
 
 	return (
 		<div>
-			<h1 className="create-title">Create Project</h1>
+			
 			<Form onSubmit={(e) => submit(e)}>
+			<h1 className="create-title">Create Project</h1>
 				<Form.Group className="form-group">
 					<Form.Label>Project Title</Form.Label>
 					<Form.Control
