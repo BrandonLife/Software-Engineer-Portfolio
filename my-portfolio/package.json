@@ -20,7 +20,7 @@
 	},
 	"scripts": {
 		"start": "react-scripts start",
-		"build": "index.js",
+		"build": "./src/index.js",
 		"test": "react-scripts test",
 		"eject": "react-scripts eject"
 	},
