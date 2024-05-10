@@ -1,7 +1,7 @@
 <h1>Software Engineer Portfolio</h1>
 
 <h1>What is this project about?</h1>
-<p>This is a porftolio project for a Software Engineer designed by me.</p>
+<p>This is my Software Engineer Portfolio.</p>
 
 <h1>Technologies used</h1>
 <ul>
@@ -21,7 +21,12 @@
 <li>Struggling to get the backend working</li>
 <p>I initially tried to use vanilla javascript to get the backend working. However this was not working. So i went to youtube to search for a solution.</p>
 <p>Solution can be found at -https://www.youtube.com/watch?v=xElA9mGi-I0</p>
-<li>Right now i have the cards showing on the screen. However the data in them is not displaying. So i need to fix that and the styling for the cards.  </li>
+<li>Deployment </li>
+<p>I had issues deploying the project on render due to my project being a monorepo. So i went to youtube to find a solution</p>
+<p>Deployment solution can be found at- https://www.youtube.com/watch?v=poXp9uP8TfM</p>
+<li>Getting the contact form to send email with body</li>
+<p>I had issues initially with getting the content of the contact form to send me an email but i figured it out from the documentation on npm</p>
+<p>Solutions can be found at-https://www.youtube.com/watch?v=tDjTun-_ZTU- this channel helped me with nodemailer or https://nodemailer.com/about/</p>
 </ol>
 
 # Getting Started with Create React App
