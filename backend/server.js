@@ -3,7 +3,7 @@ const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const bodyParser = require("body-parser");
 const cors = require("cors");
-const allowedOrigins = require('./OriginAccess')
+
 
 const app = express();
 
@@ -15,18 +15,8 @@ const emailRoutes = require('./routes/emailRoute')
 const PORT = process.env.PORT | 5000;
 
 app.use(express.json());
-const corsOptions = {
-	origin: (origin, callback)=>{
-		if(allowedOrigins.indexOf(origin) !== -1 || !origin){
-			callback(null, true)
-		}else{
-			callback(new Error('Not allowed by Cors'))
-		}
-	},
-	credentials: true,
-	optionsSuccessStatus: 200
-} 
-app.use(cors(corsOptions));
+
+app.use(cors());
 
 mongoose
 	.connect(process.env.MONGO_URI)
@@ -35,5 +25,6 @@ mongoose
 
 app.use("/api", routes);
 app.use('/api', emailRoutes)
+app.use('/', "https://software-engineer-portfolio-frontend.onrender.com")
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
