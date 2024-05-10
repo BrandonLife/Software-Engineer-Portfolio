@@ -1,6 +1,5 @@
 import React from "react";
 import { useState, useEffect } from "react";
-import Navbar from "../components/Navbar";
 import "../styles/Home.css";
 import TextTransition, { presets } from "react-text-transition";
 import Ironman from "./IronMan.png";
