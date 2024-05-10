@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 dotenv.config();
 const routes = require("./routes/ProjectRoute");
 const emailRoutes = require('./routes/emailRoute')
+const productionRoutes = require('./routes/productionRoute')
 
 const PORT = process.env.PORT | 5000;
 
@@ -25,6 +26,6 @@ mongoose
 
 app.use("/api", routes);
 app.use('/api', emailRoutes)
-app.use('/', "https://software-engineer-portfolio-frontend.onrender.com")
+app.use('/', productionRoutes)
 
 app.listen(PORT, () => console.log(`Listening on port ${PORT}`));
