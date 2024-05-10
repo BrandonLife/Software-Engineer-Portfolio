@@ -5,7 +5,7 @@ import "../styles/Home.css";
 import TextTransition, { presets } from "react-text-transition";
 import Ironman from "./IronMan.png";
 // Found this text transition package at https://www.npmjs.com/package/react-text-transition
-const PDF_URL = "http://localhost:3000/BL_Resume2023.pdf";
+const PDF_URL = "https://software-engineer-portfolio-frontend.onrender.com/BL_Resume2023.pdf";
 function Home() {
 	const wordsArr = [
 		"Software Engineer",
