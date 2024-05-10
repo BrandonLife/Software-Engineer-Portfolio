@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import Card from "react-bootstrap/Card";
 import Button from "react-bootstrap/esm/Button";
 import axios from 'axios'
-import { baseURL, deployedUrl } from "../utils/constant";
+import { baseURL} from "../utils/constant";
 function Projects() {
 	const [projects, setProjects] = useState([]);
 

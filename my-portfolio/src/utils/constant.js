@@ -1,1 +1,1 @@
-export const baseURL = "http://localhost:5000/api"
+export const baseURL = "https://software-engineer-portfolio-backend.onrender.com"
