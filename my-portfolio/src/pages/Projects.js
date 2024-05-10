@@ -12,7 +12,7 @@ function Projects() {
 	useEffect(() => {
 		axios.get(`${baseURL}/get`).then((res) => {
 			setProjects(res.data);
-		});
+		}).catch((err)=>console.log(err))
 	}, []);
 	const projectsDisplay = projects.map((project) => {
 		return (
