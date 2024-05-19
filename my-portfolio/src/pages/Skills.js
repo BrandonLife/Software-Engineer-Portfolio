@@ -1,81 +1,45 @@
 import React from "react";
+import { FaCode, FaServer } from "react-icons/fa";
 import "../styles/Skills.css";
-// import 'bootstrap/dist/css/bootstrap.css';
-// import 'bootstrap/dist/js/bootstrap.js';
-// import Carousel from 'react-bootstrap/Carousel'
-// import Image from 'react-bootstrap/Image'
 function Skills() {
-	// const [index, setIndex] = useState(0);
-
-	// const handleSelect = (selectedIndex) => {
-	//   setIndex(selectedIndex);
-	// };
 	return (
-		<div>
-			<div className="skills-title-container">
-				<h1>My Skills</h1>
-			</div>
-			<div className="skills-flex-container">
-				<div className="float-left">
-					<h1>Base Skills</h1>
-					<div className="skills">
-						<p>HTML</p>
-					</div>
-					<div className="skills">
-						<p>CSS</p>
-					</div>
-					<div className="skills">
-						<p>JavaScript</p>
-					</div>
-					<div className="skills">
-						<p>Python</p>
-					</div>
-					<div className="skills">
-						<p>SQL</p>
-					</div>
+		<section id="skills">
+			<h2>Skills</h2>
+			<div className="skills-grid">
+				<div className="skill-category">
+					<FaCode className="skill-icon" />
+					<h3>Frontend</h3>
+					<ul>
+						<li>React.js</li>
+						<li>JavaScript (ES6+)</li>
+						<li>HTML5</li>
+						<li>CSS3</li>
+						<li>Responsive Design (CSS Grid/Flexbox)</li>
+						<li>React Boostrap</li>
+						<li>Some Figma</li>
+						<li>Canva</li>
+						<li>DOM Manipulation</li>
+					</ul>
 				</div>
-				{/* End of float-left container */}
-				<div className="middle-container">
-					<h1>Front End</h1>
-					<div className="skills">
-						<p>React</p>
-					</div>
-					<div className="skills">
-						<p>Bootstrap</p>
-					</div>
-					<div className="skills">
-						<p>Canva</p>
-					</div>
-					<div className="skills">
-						<p>Figma</p>
-					</div>
-					<div className="skills">
-						<p>SASS</p>
-					</div>
-				</div>
-				<div className="float-right">
-					<h1>Back End</h1>
-					<div className="skills">
-						<p>Python</p>
-					</div>
-					<div className="skills">
-						<p>Flask</p>
-					</div>
-					<div className="skills">
-						<p>MongoDB</p>
-					</div>
-					<div className="skills">
-						<p>PostgreSQL</p>
-					</div>
-					<div className="skills">
-						<p>NodeJs</p>
-					</div>
-					<div className="skills">
-						<p>ExpressJs</p>
-					</div>
+				<div className="skill-category">
+					<FaServer className="skill-icon" />
+					<h3>Backend</h3>
+					<ul>
+						<li>Node.js</li>
+						<li>Express.js</li>
+						<li>MongoDB/PostgreSQL</li>
+						<li>RESTful APIs</li>
+						<li>Git</li>
+						<li>GitHub</li>
+						<li>Postman</li>
+						<li>AJAX</li>
+						<li>Fetch/Axios</li>
+						<li>Render/Netlify/Github Pages</li>
+						<li>Authorization/Authentication</li>
+					</ul>
 				</div>
 			</div>
-		</div>
+		</section>
 	);
 }
 
