@@ -16,7 +16,7 @@ function Skills() {
 						<li>CSS3</li>
 						<li>Responsive Design (CSS Grid/Flexbox)</li>
 						<li>React Boostrap</li>
-						<li>Some Figma</li>
+						<li>Figma</li>
 						<li>Canva</li>
 						<li>DOM Manipulation</li>
 					</ul>
