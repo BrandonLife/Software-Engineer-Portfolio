@@ -18,6 +18,7 @@ function Skills() {
 						<li>React Boostrap</li>
 						<li>Figma</li>
 						<li>Canva</li>
+						<li>Terminal/Linux/Gitbash</li>
 						<li>DOM Manipulation</li>
 					</ul>
 				</div>
